@@ -3,6 +3,7 @@ import numpy as np
 import torch
 
 from kornia.image import tensor_to_image
+from pathlib import Path
 from segment_anything import SamPredictor
 from segment_anything.modeling import Sam
 from segment_anything_fast import sam_model_registry, sam_model_fast_registry

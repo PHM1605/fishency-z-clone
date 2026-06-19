@@ -1,5 +1,9 @@
 import os, re
 
+from pathlib import Path
+
+ROOT_DIR = Path(__file__).resolve().parent
+
 cfg = {
   "batch_size": 64, # for YOLO inference
   "frame_step": 1,
@@ -7,9 +11,9 @@ cfg = {
   'sam_model_type': 'fast_vit_h',
   # 'tmp_dir': f'/run/user/{os.getuid()}/tmp', # /run/user/501/tmp
   # 'tmp_video_dir': f'/run/user/{os.getuid()}/tmp',
-  'tmp_dir': "/Users/phamhoangminh/Minh/Projects/fishency-z-clone/tmp",
-  'tmp_video_dir': "/Users/phamhoangminh/Minh/Projects/fishency-z-clone/tmp",
-  'torch_compile': True,
+  'tmp_dir': ROOT_DIR /"tmp",
+  'tmp_video_dir': ROOT_DIR / "tmp",
+  'torch_compile': False,
   'verbose': False,
   'weights_dir': 'weights/',
   'yolo_engine': 'pt',
