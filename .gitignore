@@ -1,0 +1,4 @@
+weights/
+__pycache__
+*.mp4
+tmp/
